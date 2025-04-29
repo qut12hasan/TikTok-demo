@@ -1,0 +1,21 @@
+
+document.addEventListener('DOMContentLoaded', function() {
+    const followBtn = document.getElementById('follow-btn');
+    let isFollowing = false;
+
+    followBtn.addEventListener('click', function() {
+        isFollowing = !isFollowing;
+        
+        if(isFollowing) {
+            followBtn.textContent = 'إلغاء المتابعة';
+            followBtn.classList.remove('follow');
+            followBtn.classList.add('unfollow');
+        } else {
+            followBtn.textContent = 'متابعة';
+            followBtn.classList.remove('unfollow');
+            followBtn.classList.add('follow');
+        }
+    });
+
+    // يمكن إضافة المزيد من التفاعلات هنا
+});
